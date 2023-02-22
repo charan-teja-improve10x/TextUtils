@@ -9,6 +9,13 @@
     android:padding="16dp"
     tools:context=".EndsWithActivity">
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ends with"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/end_enter_txt"
         android:layout_width="match_parent"
@@ -42,4 +49,5 @@
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         tools:text="TextView" />
+
 </LinearLayout>

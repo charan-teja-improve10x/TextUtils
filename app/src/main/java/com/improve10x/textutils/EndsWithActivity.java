@@ -27,20 +27,21 @@ public class EndsWithActivity extends AppCompatActivity {
         verifyEndBtn = findViewById(R.id.verify_end_btn);
         modifidetextTxt = findViewById(R.id.modifiedtext_txt);
     }
-    public boolean checkEndCharSequence(String originalTxt, String suffixTxt){
+
+    public boolean checkEndCharSequence(String originalTxt, String suffixTxt) {
         boolean result = false;
         result = originalTxt.endsWith(suffixTxt);
         return result;
     }
 
-    public void displayedModifiedText(){
+    public void displayedModifiedText() {
         String originalText = endEnterTxt.getText().toString();
         String suffixText = suffixTxt.getText().toString();
-        boolean modifiedText = checkEndCharSequence(originalText,suffixText);
+        boolean modifiedText = checkEndCharSequence(originalText, suffixText);
         modifidetextTxt.setText(modifiedText + "");
     }
 
-    public void handleVerifyBtn(){
+    public void handleVerifyBtn() {
         verifyEndBtn.setOnClickListener(v -> {
             displayedModifiedText();
         });

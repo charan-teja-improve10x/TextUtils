@@ -8,6 +8,13 @@
     android:padding="16dp"
     tools:context=".ReplaceActivity">
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Replacing"
+        android:textSize="20sp" />
+
     <EditText
         android:id="@+id/original_txt"
         android:layout_width="match_parent"
