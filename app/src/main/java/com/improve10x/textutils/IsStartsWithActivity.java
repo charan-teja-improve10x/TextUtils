@@ -28,21 +28,27 @@ public class IsStartsWithActivity extends AppCompatActivity {
         modifiedTxt = findViewById(R.id.modified_txt);
     }
 
-    public boolean prefixText(String originalText, String prefixText){
-        boolean modifiedText = false;
-         modifiedText = originalText.startsWith(prefixText);
-        return modifiedText;
+    public boolean prefixText(String originalText, String prefix){
+//        Take originalText , prefix as String inputs
+//        Declare result of boolean data type and assign to false
+        boolean result = false;
+//        if( a.startsWith(b)) then
+//                result = true
+        result = originalText.startsWith(prefix);
+//        return result
+        return result;
     }
 
-    public void displayCharSequence(){
-       String originolText = enterTxt.getText().toString();
-       String prefixText = prefixTxt.getText().toString();
-       boolean modifiedText = prefixText(originolText,prefixText);
-       modifiedTxt.setText(modifiedText + "");
+    public void verifyAnswer(){
+       String originalText = enterTxt.getText().toString();
+       String prefix = prefixTxt.getText().toString();
+       boolean result = false;
+        result = prefixText(originalText,prefix);
+       modifiedTxt.setText(result + "");
     }
     public void handleVerifyBtn(){
         verifyBtn.setOnClickListener(v -> {
-            displayCharSequence();
+            verifyAnswer();
         });
     }
 }

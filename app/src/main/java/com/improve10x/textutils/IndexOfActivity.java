@@ -29,16 +29,25 @@ public class IndexOfActivity extends AppCompatActivity {
     }
 
     public void verifyAnswer(){
+//        Take originalText, prefix as input Strings
         String originalText = originalString.getText().toString();
-        String position = charPosition.getText().toString();
-        String answer = correctAnswer(originalText,position);
-        indexPosition.setText(answer);
+        String prefix = charPosition.getText().toString();
+//        Declare result of int assigned = -1
+        int result = -1;
+//        result = originalText.indexOf(prefix  )
+        result = correctAnswer(originalText,prefix);
+//        return result
+        indexPosition.setText(result + "");
     }
 
-    public String correctAnswer(String originalString, String charPosition){
-        String result = "";
-        result = String.valueOf(originalString.indexOf(charPosition));
-       return result + "";
+    public int correctAnswer(String originalString, String charPosition){
+//        Take originalText, prefix as input Strings
+//        Declare result of int assigned = -1
+        int result = -1;
+//        result = originalText.indexOf(prefix  )
+        result = originalString.indexOf(charPosition);
+//        return result
+       return result;
     }
 
     public void handleVerifyBtn(){

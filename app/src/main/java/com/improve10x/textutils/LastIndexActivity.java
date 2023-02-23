@@ -28,17 +28,26 @@ public class LastIndexActivity extends AppCompatActivity {
        resultTxt = findViewById(R.id.result_txt);
     }
 
-    public String correctAnswer(String originalText, String text){
-        String result = "";
-        result = String.valueOf(originalText.lastIndexOf(text));
+    public int correctAnswer(String originalText, String suffix){
+//        Take originalString - String, suffix - String
+          int result = -1;
+//        Declare result of int and assigned as -1
+//        result = originalString.lastIndexOf(suffix)
+        result = originalText.lastIndexOf(suffix);
+//        return result
         return result;
     }
 
     public void verifyAnswer(){
-        String originolString = lastIndexTxt.getText().toString();
-        String text = lastPosition.getText().toString();
-        String result = correctAnswer(originolString, text);
-        resultTxt.setText(result);
+//        Take originalString - String, suffix - String
+        String originalString = lastIndexTxt.getText().toString();
+        String suffix = lastPosition.getText().toString();
+//        Declare result of int and assigned as -1
+        int result = -1;
+ //       result = originalString.lastIndexOf(suffix)
+        result = correctAnswer(originalString, suffix);
+//        return result
+        resultTxt.setText(result + " ");
     }
 
     public void handleVerifyBtn(){

@@ -30,18 +30,27 @@ public class ReplaceActivity extends AppCompatActivity {
         changedTxt = findViewById(R.id.changed_txt);
     }
 
-    public String displaysReplacingText(String originalText, String oldText, String newText){
-        String changedText = "";
-        changedText = originalText.replace(oldText,newText);
-        return changedText;
+    public String displaysReplacingText(String originalString, String oldString, String newString){
+//        Take originalString, oldString and newString  - input Strings
+//        Declare result of String and assigned to “”
+        String result = "";
+//        result = originalString.replace(oldString, newString)
+        result = originalString.replace(oldString,newString);
+//        return result
+        return result;
     }
 
     public void displaymodifiedText(){
+//        Take originalString, oldString and newString  - input Strings
         String originalText = originalTxt.getText().toString();
-        String oldText = oldTxt.getText().toString();
-        String newText = newTxt.getText().toString();
-        String changedText = displaysReplacingText(originalText, oldText, newText);
-        changedTxt.setText(changedText);
+        String oldString = oldTxt.getText().toString();
+        String newString = newTxt.getText().toString();
+//        Declare result of String and assigned to “”
+        String result = "";
+//        result = originalString.replace(oldString, newString)
+        result = displaysReplacingText(originalText, oldString, newString);
+//        return result
+        changedTxt.setText(result);
     }
 
     public void handleVerifyBtn(){
